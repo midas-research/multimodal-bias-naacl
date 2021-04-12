@@ -18,16 +18,16 @@ import seaborn as sns
 # from scipy.stats import spearmanr
 from scipy.stats import ttest_ind
 
-with open('../input/bias-in-ec/audio_featDict.pkl', 'rb') as f:
+with open('./data/audio_featDict.pkl', 'rb') as f:
     audio_featDict=pickle.load(f)
 
-with open('../input/bias-in-ec/audio_featDictMark2.pkl', 'rb') as f:
+with open('./data/audio_featDictMark2.pkl', 'rb') as f:
     audio_featDictMark2=pickle.load(f)
 
-with open('../input/bias-in-ec/genders.pkl', 'rb') as f:
+with open('./data/genders.pkl', 'rb') as f:
     genders=pickle.load(f)
 
-df= pd.read_csv("../input/bias-in-ec/full_stock_data.csv")
+df= pd.read_csv("./data/full_stock_data.csv")
 
 error=[]
 error_text=[]

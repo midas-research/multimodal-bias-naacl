@@ -19,22 +19,22 @@ from scipy.stats import pearsonr
 from scipy.stats import spearmanr
 import tensorflow as tf
 
-with open('../input/bias-in-ec/audio_featDict.pkl', 'rb') as f:
+with open('./data/audio_featDict.pkl', 'rb') as f:
     audio_featDict=pickle.load(f)
 
-with open('../input/bias-in-ec/audio_featDictMark2.pkl', 'rb') as f:
+with open('./data/audio_featDictMark2.pkl', 'rb') as f:
     audio_featDictMark2=pickle.load(f)
 
 ## add finbert embeddings here --> change path
-with open('../input/bias-in-ec/finbert_earnings.pkl', 'rb') as f:
+with open('./data/finbert_earnings.pkl', 'rb') as f:
     text_dict=pickle.load(f)
 
-with open('../input/bias-in-ec/genders.pkl', 'rb') as f:
+with open('./data/genders.pkl', 'rb') as f:
     genders=pickle.load(f)
 
-traindf= pd.read_csv("../input/bias-in-ec/train_split3.csv")
-testdf=pd.read_csv("../input/bias-in-ec/test_split3.csv")
-valdf=pd.read_csv("../input/bias-in-ec/val_split3.csv")
+traindf= pd.read_csv("./data/train_split3.csv")
+testdf=pd.read_csv("./data/test_split3.csv")
+valdf=pd.read_csv("./data/val_split3.csv")
 
 
 error=[]
