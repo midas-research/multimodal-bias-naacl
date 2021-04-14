@@ -43,7 +43,7 @@ pip install -r requirements.txt
 
 #### Gender data
 
-  The speakers are mapped from all the earnings calls to their self declared genders. The sample can be seen  at ./data/genders.pkl. For this we perform web scrapping from [Reuters](https://www.thomsonreuters.com/en/profiles.html) (pronouns), [Crunchbase](https://www.crunchbase.com/discover/people) where the genders are self-declared and the available genders from the Wikidata API. The entire csv with gender data is available at ./data/genders.csv
+  The speakers are mapped from all the earnings calls to their self declared genders. The sample can be seen  at ./data/genders.pkl. For this we perform web scrapping from [Reuters](https://www.thomsonreuters.com/en/profiles.html) (pronouns), [Crunchbase](https://www.crunchbase.com/discover/people) where the genders are self-declared and the available genders from the Wikidata API. The entire gender data is available at ./data/genders.csv
 
 #### Dataset splits
 
