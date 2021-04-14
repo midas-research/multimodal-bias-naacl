@@ -9,17 +9,17 @@ Predicting Financial Risk Using Verbal and Vocal Cues) [dataset](https://github.
 
 ## Environment & Installation Steps
 
-Python 3.6
-Keras 2.4.3
-Librosa 0.8.0
-Matplotlib 3.3.2
-Numpy 1.19.2
-Pandas 1.1.3
-Parselmouth 1.1.1
-Scikit Learn 0.23.2
-Scipy 1.5.2
-Seaborn 0.11.0
-Tensorflow 2.4.1
+Python 3.6\
+Keras 2.4.3\
+Librosa 0.8.0\
+Matplotlib 3.3.2\
+Numpy 1.19.2\
+Pandas 1.1.3\
+Parselmouth 1.1.1\
+Scikit Learn 0.23.2\
+Scipy 1.5.2\
+Seaborn 0.11.0\
+Tensorflow 2.4.1\
 Tqdm 4.50.2
 
 ```bash
@@ -35,19 +35,19 @@ pip install -r requirements.txt
   python audio_feat_extraction_praat.py
   ```
   This will store 18 of the audio features at the path ./data/audio_featDict.pkl and the remaining at ./data/audio_featDictMark2.pkl
-  The samples for these files have been added. Each .pkl file contains a dictionary of dictionaries of for all the segmented audio recordings.
+  The samples for these files have been added. Each .pkl file contains a dictionary of dictionaries of features for all the segmented audio recordings.
 
 #### Textual feature extraction
 
-  Text features have been extracted using FinBERT[code](https://github.com/ProsusAI/finBERT)[6]. Each feature vector is 786 dimensional whose sample can be seen at ./data/finbert_earnings.pkl
+  Text features have been extracted using FinBERT [[code]](https://github.com/ProsusAI/finBERT)[6]. Each feature vector is 786 dimensional whose sample can be seen at ./data/finbert_earnings.pkl
 
 #### Gender data
 
-  The speakers are mapped from all the earnings calls to their self declared genders. The sample can be seen  at ./data/genders.pkl. For this we perform web scrapping from [Reuters](https://www.thomsonreuters.com/en/profiles.html) (pronouns), [Crunchbase](https://www.crunchbase.com/discover/people) where the genders are self-declared and the available genders from the Wikidata API.
+  The speakers are mapped from all the earnings calls to their self declared genders. The sample can be seen  at ./data/genders.pkl. For this we perform web scrapping from [Reuters](https://www.thomsonreuters.com/en/profiles.html) (pronouns), [Crunchbase](https://www.crunchbase.com/discover/people) where the genders are self-declared and the available genders from the Wikidata API. The entire csv with gender data is available at ./data/genders.csv
 
 #### Dataset splits
 
-  The train, test and validation splits are performed temporally to avoid predicting on past data. The splits are performed according to [MDRM](https://www.aclweb.org/anthology/P19-1038.pdf). The sample data can be seen at ./data/*.csv
+  The train, test and validation splits are performed temporally to avoid predicting on past data. The splits are performed according to [MDRM](https://www.aclweb.org/anthology/P19-1038.pdf). The sample data can be seen at ./data/train_split3.csv, ./data/test_split3.csv, ./data/val_split3.csv and ./data/full_stock_data.csv\
   Each csv contains the following columns : ticker, name, year, month, day, future_3, future_7, future_15, future_30, text_file_name, past_3, past_7, past_15, past_30
 
 ## Run
